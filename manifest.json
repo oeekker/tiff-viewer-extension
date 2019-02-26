@@ -29,5 +29,12 @@
     "128": "icon128.png",
     "48": "icon48.png",
     "16": "icon16.png",
+  },
+  
+  "applications": {
+    "gecko": {
+      "id": "{CC3C233D-6668-41bc-AAEB-F3A1D1D594F5}",
+      "strict_min_version": "60.0",
+    }
   }
 }
