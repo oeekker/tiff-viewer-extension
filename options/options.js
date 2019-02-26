@@ -1,4 +1,5 @@
 "use strict";
+
 const DecoderMemoryLimitInMegabytesDefault = 32;
 const ShowDebugOutputDefault = false;
 
@@ -7,7 +8,7 @@ function save_options() {
     var SaveDecoderMemoryLimitInMegabytes = parseInt(document.getElementById('DecoderMemoryLimitInMegabytes').value);
     var SaveDebugOutput = document.getElementById('ShowDebugOutput').checked;
   
-  // Before saving verify if SaveDebugOutput was updated
+    // Before saving verify if SaveDebugOutput was updated
     chrome.storage.local.get('ShowDebugOutput', function(options) {
         var CheckShowDebugOutput = options.ShowDebugOutput;
         chrome.storage.local.set({
@@ -43,6 +44,7 @@ function restore_options() {
         }
     });
 }
+
 // Reset select box and checkbox state using the default 
 // add-on values.
 function reset_options() {
@@ -56,6 +58,7 @@ function reset_options() {
       status.textContent = '';
     }, 1550);
 }
+
 document.addEventListener('DOMContentLoaded', restore_options);
 document.getElementById('save').addEventListener('click', save_options);
 document.getElementById('reset').addEventListener('click', reset_options);
